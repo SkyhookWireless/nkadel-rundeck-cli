@@ -156,7 +156,7 @@ def scriptsClos = {
             '^# Determine the Java command to use to start the JVM.*',
             '''
 # Source user's config file
-APP_CONFIG=$HOME/.$APP_NAME/$APP_NAME.conf
+APP_CONFIG=${APP_CONFIG}:-$HOME/.$APP_NAME/$APP_NAME.conf
 test -f $APP_CONFIG && source $APP_CONFIG
 '''
     )
